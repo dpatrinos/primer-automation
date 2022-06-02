@@ -17,7 +17,7 @@ Import data from [here](https://wlu.box.com/shared/static/ohd6zr6m7kjt0b19bu1kvd
 
 Run script from project directory:
 ```bash
-  $ python app.py
+  $ python script.py
 ```
 
 ## Acknowledgements

@@ -1,5 +1,6 @@
-# Storage problems
+# Repo specific
 data
+fasta_archive
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

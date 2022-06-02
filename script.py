@@ -1,5 +1,6 @@
 import pandas as pd
 import re
+import os
 
 intron_id = input("Enter the number of novel intron: ")
 intron_id_index = (int(intron_id)-1)
@@ -21,7 +22,10 @@ three_sequence = chromosome_sequence[(last_base+1):(last_base+151)]
 complete_sequence = five_sequence + three_sequence
 complete_sequence_broken = re.sub("(.{81})", "\\1\n", complete_sequence, 0, re.DOTALL)
 
+if not os.path.exists("fasta_archive"):
+    os.mkdir("fasta_archive")
+
 fasta = open("fasta_archive/{}.fasta".format(intron_id), "x")
 fasta.write(">" + chromosome + " Rattus norvegicus, Rnor_6.0\n" + complete_sequence_broken + "\n")
 fasta.close()
-print("{}.fasta".format(intron_id) + " file created in `~/primer-automation/fasta_archive`")
+print("{}.fasta".format(intron_id) + " created in `~/primer-automation/fasta_archive`")
