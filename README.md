@@ -6,13 +6,13 @@ A python-based script that uses the NCBI Rat Genome Database v6.0 to create .fas
 
 ## Getting Started
 
-Import data from [here](https://wlu.box.com/shared/static/t0q44gzdc0nomy1ux3n0e1qkzyihviiv.zip) (protected) then run the following in terminal:
+Import data from [here](https://wlu.box.com/shared/static/ohd6zr6m7kjt0b19bu1kvdnn7duj7eiv.zip) (protected) to ~/ then run the following in terminal:
 
 ```bash
   $ git clone https://github.com/dpatrinos/primer-automation.git
   $ cd primer-automation
   $ pip install -r requirements.txt
-  $ unzip ~/data.zip -d ~/primer-automation/
+  $ mv ~/data ~/primer-automation/
 ```
 
 Run script from project directory:
