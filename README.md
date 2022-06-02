@@ -1,5 +1,6 @@
 
 # primer-automation
+[![Github All Releases](https://img.shields.io/github/downloads/dpatrinos/primer-automation/total.svg)]()
 [![MIT License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/dpatrinos/primer-automation/blob/main/LICENSE)
 
 A python-based script that uses the NCBI Rat Genome Database v6.0 to create .fasta files for the nucleotide sequences of novel exon pairs
