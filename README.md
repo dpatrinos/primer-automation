@@ -29,5 +29,5 @@ Run script from project directory:
  - Washington and Lee University Summer Research Scholars Program, Lexington, VA
 
 ## License
-primer-automation is releaesd under an [MIT](https://github.com/dpatrinos/primer-automation/blob/main/LICENSE) license.
+primer-automation is released under an [MIT](https://github.com/dpatrinos/primer-automation/blob/main/LICENSE) license.
 
