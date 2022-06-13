@@ -22,9 +22,7 @@ def menu():
 
 
 def novel_seq():
-    intron_id = input("Enter the novel intron number (from firstPass): ")
-    intron_id_index = (int(intron_id)-1)
-
+    intron_id = int(input("Enter the novel intron number (from firstPass): "))
     bases_left = int(input("Enter the number of bases to the left of intron start you'd like to go: "))
     bases_right = int(input("Enter the number of bases to the right of intron end you'd like to go: "))
 
@@ -32,11 +30,12 @@ def novel_seq():
         print("-", end="")
 
     with open('data/firstPass_min.csv', 'r') as f:
-        splices = pd.read_csv(f, skiprows=intron_id_index, nrows=1)
+        splices = pd.read_csv(f)
 
-    chromosome = splices.iat[0, 1]
-    first_base = int(splices.iat[0, 2])
-    last_base = int(splices.iat[0, 3])
+    row = splices.loc[splices['X'] == intron_id]
+    chromosome = row.iat[0, 1]
+    first_base = int(row.iat[0, 2])
+    last_base = int(row.iat[0, 3])
     print("\nNovel intron " + str(intron_id) + "\n" + chromosome + ": " + str(first_base) + ".." + str(last_base))
 
     with open("data/ncbi/GCF_000001895.5/{}.fna".format(chromosome), "r") as f:
